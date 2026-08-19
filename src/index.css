@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-obsidian: #101415;
+  --color-obsidian-lowest: #0b0f10;
+  --color-obsidian-low: #191c1e;
+  --color-obsidian-container: #1d2022;
+  --color-obsidian-high: #272a2c;
+  --color-obsidian-highest: #323537;
+
+  --color-electric-blue: #7df4ff;
+  --color-electric-blue-dim: #00dbe9;
+  --color-electric-blue-light: #d3fbff;
+
+  --color-cyber-lime: #abd600;
+  --color-cyber-lime-bright: #c3f400;
+
+  --color-text-main: #e0e3e5;
+  --color-text-variant: #c6c6cb;
+  --color-text-muted: #909095;
+  --color-border-subtle: #45474b;
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-serif);
+  }
+  .font-inter {
+    font-family: var(--font-sans);
+  }
+  .font-spacemono {
+    font-family: var(--font-mono);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .glass-panel-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-panel-hover:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(125, 244, 255, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(125, 244, 255, 0.08);
+  }
+
+  .ambient-glow-blue {
+    background: radial-gradient(circle, rgba(125, 244, 255, 0.07) 0%, rgba(16, 20, 21, 0) 70%);
+  }
+
+  .ambient-glow-lime {
+    background: radial-gradient(circle, rgba(171, 214, 0, 0.06) 0%, rgba(16, 20, 21, 0) 70%);
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #101415;
+}
+::-webkit-scrollbar-thumb {
+  background: #272a2c;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #45474b;
+}

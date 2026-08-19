@@ -1,0 +1,6 @@
+{
+  "name": "From Business to AI",
+  "description": "A narrative journey bridging international business, marketing strategy, and artificial intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
