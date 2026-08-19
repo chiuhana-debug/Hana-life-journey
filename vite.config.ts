@@ -5,7 +5,6 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    return {
   base: '/Hana-life-journey/',
     plugins: [react(), tailwindcss()],
     resolve: {
